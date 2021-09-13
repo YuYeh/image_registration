@@ -1,0 +1,5 @@
+eddbicp.exe 功用：建立兩張影像間轉換關係與對應
+指令：eddbicp.exe 轉換影像名稱+副檔名(EX：rsp1.png) 基準影像名稱+副檔名(EX：rsp2.png) -model 2(使用quad轉換矩陣) -xform_as_to(輸出轉換影像到基底影像的image) -gm(Do Gradient_Magnitude)
+
+多圖時使用方式：
+for /l %%i in (1,1,4) do  for /l %%j in (%%i,1,4) do eddbicp.exe rsp%%i.png rsp%%j.png -model 2 -xform_as_to -gm
